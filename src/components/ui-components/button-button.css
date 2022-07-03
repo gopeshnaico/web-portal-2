@@ -1,0 +1,11 @@
+.btt-primary {
+
+    background: #00abd1;
+    color: #fff;
+    border: 1px solid #00abd1;
+
+}
+
+.storybook-button--primary:hover {
+    background: #22b4d4;
+}

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44.61" height="32.658" viewBox="0 0 44.61 32.658">
+  <g id="delivery-truck" transform="translate(0 -68.597)">
+    <path id="Path_9038" data-name="Path 9038" d="M339.92,164.8h-9.211v16.695H345.8v-7.514l-1.76-6.083a4.29,4.29,0,0,0-4.12-3.1" transform="translate(-301.897 -87.822)" fill="#ff7058"/>
+    <path id="Path_9039" data-name="Path 9039" d="M365.565,195.871,364,190.448a2.207,2.207,0,0,0-2.109-1.585h-7.115v7.007Z" transform="translate(-323.864 -109.789)" fill="#84dbff"/>
+    <path id="Path_9040" data-name="Path 9040" d="M365.529,195.839h-10.8v-7.007Z" transform="translate(-323.826 -109.76)" fill="#cdd6e0"/>
+    <path id="Path_9041" data-name="Path 9041" d="M365.565,195.871,364,190.448a2.207,2.207,0,0,0-2.109-1.585h-7.115Z" transform="translate(-323.864 -109.789)" fill="#f2f2f2"/>
+    <path id="Path_9042" data-name="Path 9042" d="M2.788,68.6H26.024a2.788,2.788,0,0,1,2.788,2.788V93.672H0V71.385A2.788,2.788,0,0,1,2.788,68.6" fill="#ffd15c"/>
+    <path id="Path_9043" data-name="Path 9043" d="M122.859,68.651v7.367l-1.078-1.078-1.13,1.13-1.129-1.13-1.129,1.13-1.131-1.13-1.144,1.13-1.128-1.13L113.9,76.031v-7.38Z" transform="translate(-103.976 -0.049)" fill="#f2f2f2"/>
+    <path id="Path_9044" data-name="Path 9044" d="M44.65,322.129v3.15H.043v-3.15H4.7a6.388,6.388,0,0,1,11.152,0h14.98a6.379,6.379,0,0,1,11.141,0Z" transform="translate(-0.039 -228.458)" fill="#334a5e"/>
+    <path id="Path_9045" data-name="Path 9045" d="M375.132,345.689a4.451,4.451,0,1,1-4.452-4.452,4.452,4.452,0,0,1,4.452,4.452" transform="translate(-334.322 -248.887)" fill="#40596b"/>
+    <path id="Path_9046" data-name="Path 9046" d="M400.367,373.606a1.789,1.789,0,1,1-1.788-1.788,1.788,1.788,0,0,1,1.788,1.788" transform="translate(-362.22 -276.804)" fill="#acb3ba"/>
+    <path id="Path_9047" data-name="Path 9047" d="M75.241,345.689a4.452,4.452,0,1,1-4.452-4.452,4.453,4.453,0,0,1,4.452,4.452" transform="translate(-60.557 -248.887)" fill="#40596b"/>
+    <path id="Path_9048" data-name="Path 9048" d="M100.484,373.606a1.788,1.788,0,1,1-1.788-1.788,1.788,1.788,0,0,1,1.788,1.788" transform="translate(-88.464 -276.804)" fill="#acb3ba"/>
+  </g>
+</svg>

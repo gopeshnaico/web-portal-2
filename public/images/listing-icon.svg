@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="19.152" height="25.999" viewBox="0 0 19.152 25.999">
+  <g id="Group_55111" data-name="Group 55111" transform="translate(-113.98 -880.433)">
+    <g id="box" transform="translate(97.948 886)">
+      <g id="Group_53985" data-name="Group 53985" transform="translate(16.032 -0.001)">
+        <g id="Group_53984" data-name="Group 53984">
+          <path id="Path_8346" data-name="Path 8346" d="M35.015,4.508,25.738.029a.3.3,0,0,0-.26,0L16.2,4.508a.3.3,0,0,0-.169.27V15.654a.3.3,0,0,0,.169.27L25.478,20.4a.3.3,0,0,0,.26,0l9.277-4.478a.3.3,0,0,0,.169-.27V4.777A.3.3,0,0,0,35.015,4.508ZM25.608.631,34.2,4.777l-2.49,1.2a.3.3,0,0,0-.051-.032l-8.53-4.118ZM22.45,2.168l8.576,4.14-1.756.848L20.7,3.017Zm8.777,4.708V10.01l-1.641.792V7.668Zm3.359,8.59-8.678,4.189V9.444l2.07-1a.3.3,0,1,0-.26-.539L25.608,8.923l-.83-.4a.3.3,0,0,0-.26.539l.791.382V19.655l-8.678-4.189V5.254l6.608,3.19a.3.3,0,0,0,.26-.539L17.02,4.777l2.973-1.435,8.991,4.34,0,.005v3.591a.3.3,0,0,0,.429.27l2.239-1.081a.3.3,0,0,0,.169-.27V6.587l2.76-1.333V15.466Z" transform="translate(-16.032 0.001)" fill="#00aeef"/>
+        </g>
+      </g>
+      <g id="Group_53987" data-name="Group 53987" transform="translate(17.31 13.618)">
+        <g id="Group_53986" data-name="Group 53986">
+          <path id="Path_8347" data-name="Path 8347" d="M49.839,341.948l-1.361-.657a.3.3,0,0,0-.26.539l1.361.657a.3.3,0,0,0,.26-.539Z" transform="translate(-48.048 -341.261)" fill="#00aeef"/>
+        </g>
+      </g>
+      <g id="Group_53989" data-name="Group 53989" transform="translate(17.312 12.198)">
+        <g id="Group_53988" data-name="Group 53988">
+          <path id="Path_8348" data-name="Path 8348" d="M51.138,306.981l-2.612-1.261a.3.3,0,0,0-.26.539l2.612,1.261a.3.3,0,0,0,.26-.539Z" transform="translate(-48.096 -305.69)" fill="#00aeef"/>
+        </g>
+      </g>
+    </g>
+    <g id="Icon_feather-plus" data-name="Icon feather-plus" transform="translate(118.5 873.333)">
+      <path id="Path_8542" data-name="Path 8542" d="M18,7.5v5.667" transform="translate(-7.667)" fill="none" stroke="#00aeef" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.8"/>
+      <path id="Path_8543" data-name="Path 8543" d="M7.5,18h5.667" transform="translate(0 -7.667)" fill="none" stroke="#00aeef" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.8"/>
+    </g>
+  </g>
+</svg>

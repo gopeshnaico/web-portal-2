@@ -1,0 +1,402 @@
+mutation SendOtpMutation($data: SendOTPInput!) {
+  sendOTP(data: $data) {
+    isSend
+    message
+    secondsLeft
+    otp
+  }
+}
+
+mutation VerifyOTP($data: VerifyOTPInput!) {
+  verifyOTP(data: $data) {
+    token
+    refreshToken
+    message
+    isVerified
+    loginAttemptsLeft
+    isFirstLogin
+    user {
+      fullName
+      id
+      email
+      phone
+      isLocked
+      failedLoginAttempt
+      Customers {
+        customerId
+      }
+    }
+  }
+}
+mutation UpdateUser($data: UserUpdateInputDto!) {
+  updateUser(data: $data) {
+    id
+    fullName
+    shortName
+    email
+  }
+}
+
+mutation UserLogin($data: AuthLoginInput!) {
+  passwordLogin(data: $data) {
+    token
+    user {
+      id
+      fullName
+      Customers {
+        customerId
+      }
+    }
+    message
+    isVerified
+  }
+}
+
+mutation SendUserPasswordResetLink($data: SendUserPasswordResetLinkInput!) {
+  sendUserPasswordResetLink(data: $data) {
+    message
+    isSuccess
+  }
+}
+
+mutation RedeemUserPasswordResetToken(
+  $data: RedeemUserPasswordResetTokenInput!
+) {
+  redeemUserPasswordResetToken(data: $data) {
+    message
+    isVerified
+  }
+}
+
+mutation AddAddress($data: AddressTypeUpdateInput!) {
+  createAddress(data: $data) {
+    id
+  }
+}
+
+query GetAddress($where: CustomerAddressWhereInput) {
+  addresses(where: $where) {
+    id
+    shopName
+    contactName
+    phone
+    addressLine1
+    addressLine2
+    landmark
+    pincode
+    gstin
+    defaultBilling
+    defaultShipping
+    isActive
+  }
+}
+
+mutation UpdateAddress(
+  $data: UpdateAddressInputDTO!
+  $where: AddressWhereUniqueInput
+) {
+  updateAddress(data: $data, where: $where) {
+    id
+    shopName
+    contactName
+    phone
+    addressLine1
+    addressLine2
+    landmark
+    pincode
+    gstin
+    defaultBilling
+    defaultShipping
+  }
+}
+
+mutation DeleteAddress($where: AddressWhereUniqueInput) {
+  deleteAddress(where: $where) {
+    id
+    addressTypeId
+  }
+}
+
+mutation EnrollUser($data: EnrollUserInput!) {
+  enrollUser(data: $data) {
+    id
+    name
+    channelId
+    Users {
+      User {
+        fullName
+      }
+    }
+  }
+}
+
+query ViewCustomerDetails($where: CustomerWhereDetailInput!) {
+  customer(where: $where) {
+    name
+    CustomerEnrollmentValue {
+      attributeId
+      attributeValueText
+      Attribute {
+        name
+      }
+    }
+    EnrollmentType {
+      id
+      name
+    }
+  }
+}
+
+query Categories {
+  categories {
+    id
+    name
+    description
+    logoAssetId
+    Asset {
+      id
+      AssetStore {
+        storage
+      }
+    }
+    CategoryLinkedCategoryHeader {
+      Category {
+        id
+        name
+      }
+    }
+  }
+}
+mutation CategoryUpdate($data: UserUpdateInputDto!) {
+  updateUser(data: $data) {
+    email
+    UserPreference {
+      userId
+      channelId
+      categoryHeaderId
+      CategoryHeader {
+        name
+      }
+    }
+  }
+}
+
+query UserPreferences {
+  userPreferences {
+    id
+    userId
+    channelId
+    categoryHeaderId
+    CategoryHeader {
+      id
+      name
+    }
+  }
+}
+mutation UpdateCustomerDetails($data: UpdateCustomerDto!) {
+  updateCustomer(data: $data) {
+    id
+    name
+  }
+}
+
+query Brands(
+  $where: BrandWhereInputDTO
+  $take: Int
+  $skip: Int
+  $orderBy: [BrandOrderByWithRelationInputDTO!]
+  $brandsCountWhere2: BrandWhereInputDTO!
+) {
+  brands(where: $where, take: $take, skip: $skip, orderBy: $orderBy) {
+    id
+    name
+    decription
+    BrandRelation {
+      id
+      name
+    }
+    WorkFlowContextInstance {
+      WorkFlowStatus {
+        name
+      }
+    }
+    rating
+    logoURL
+  }
+  brandsCount(where: $brandsCountWhere2)
+}
+
+mutation AddBrand($data: BrandCreateInput!) {
+  createBrand(data: $data) {
+    id
+    name
+    decription
+    customerId
+  }
+}
+
+query ProductDetailsAttributeList($where: CategoryWhereUniqueInput!) {
+  ProductDetailsAttributeList(where: $where) {
+    Attributes {
+      Attribute {
+        id
+        name
+        AttributeValue {
+          id
+          name
+          AttributeValue_TL {
+            name
+          }
+        }
+        Attribute_TL {
+          name
+        }
+        AttributeControlTypeValue {
+          controlValue
+          AttributeControlType {
+            controlField
+          }
+        }
+      }
+    }
+  }
+}
+query BrandDetails($where: BrandWhereUniqueInput!) {
+  brand(where: $where) {
+    id
+    name
+    decription
+    customerId
+    BrandRelation {
+      id
+      name
+    }
+    WorkFlowContextInstance {
+      WorkFlowStatus {
+        name
+      }
+    }
+    Products {
+      id
+      name
+      description
+      categoryId
+      brandId
+      unitPrice
+      discount
+      isActive
+      WorkFlowContextInstance {
+        WorkFlowStatus {
+          name
+        }
+      }
+    }
+    logoAssetId
+    BrandAsset {
+      Asset {
+        AssetStore {
+          storage
+        }
+      }
+    }
+  }
+}
+query ProductListWithBrandId(
+  $where: ProductWhereInput
+  $take: Int
+  $skip: Int
+  $orderBy: [ProductOrderByWithRelationInput!]
+) {
+  products(where: $where, take: $take, skip: $skip, orderBy: $orderBy) {
+    id
+    title
+    name
+    isActive
+    brandId
+    unitPrice
+    description
+    moq
+    imageUrl
+    discount
+  }
+  productsCount
+}
+
+query BrandsSelect($where: BrandWhereInputDTO) {
+  brands(where: $where) {
+    id
+    name
+    logoURL
+  }
+}
+
+mutation CreateKYC($data: KYCCreateInput!) {
+  createKYC(data: $data) {
+    id
+    customerId
+    KYCHeader {
+      name
+    }
+    CustomerKYCAsset {
+      Asset {
+        AssetStore {
+          storage
+        }
+      }
+    }
+  }
+}
+
+query BrandIdGeoLocations {
+  geoLocations {
+    id
+    name
+    SubGeoLocation {
+      id
+      name
+    }
+  }
+}
+
+query ProductList(
+  $where: ProductWhereInput
+  $take: Int
+  $skip: Int
+  $orderBy: [ProductOrderByWithRelationInput!]
+) {
+  products(where: $where, take: $take, skip: $skip, orderBy: $orderBy) {
+    id
+    title
+    name
+    imageUrl
+    description
+    unitPrice
+    isActive
+    moq
+  }
+  productsCount
+}
+
+mutation UpdateProduct(
+  $where: ProductWhereUniqueInput!
+  $data: ProductUpdateInput!
+) {
+  updateProduct(where: $where, data: $data) {
+    id
+    categoryId
+    isActive
+    name
+  }
+}
+
+query Locations {
+  geoLocations {
+    id
+    name
+    SubGeoLocation {
+      id
+      name
+      parentId
+    }
+  }
+}
