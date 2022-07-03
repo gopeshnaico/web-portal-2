@@ -90,7 +90,6 @@ export const AddBrandPage = () => {
           register,
           handleAddBrand,
           handleSubmit,
-          errors,
           documentUpload,
           setSelectedDocument,
           selectedDocument,

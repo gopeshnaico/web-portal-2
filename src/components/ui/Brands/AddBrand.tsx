@@ -3,7 +3,7 @@ import { FC } from 'react';
 import {
   FieldValues,
   UseFormHandleSubmit,
-  UseFormRegister,
+  UseFormRegister
 } from 'react-hook-form';
 
 import { documentUpload } from '../../../lib/SidebarListApi';
@@ -18,9 +18,6 @@ interface addBrandProps {
   register: UseFormRegister<FieldValues>;
   handleAddBrand: (formValues: object) => Promise<void>;
   handleSubmit: UseFormHandleSubmit<FieldValues>;
-  errors: {
-    [x: string]: { message: string };
-  };
   setSelectedDocument: any;
   selectedDocument: any;
 }
@@ -29,7 +26,6 @@ export const AddBrandForm: FC<addBrandProps> = ({
   register,
   handleAddBrand,
   handleSubmit,
-  errors,
   setSelectedDocument,
   selectedDocument,
 }) => {

@@ -170,8 +170,8 @@ export const ProductList: FC<ProductListProps> = ({
       </div>
       <div className="clear-both" />
       <div className="row-outer block flex-wrap md:flex pt-5 product-list-outer">
-        {productListData?.products?.map((list) => (
-          <div className="w-full px-3 mb-5 md:w-6/12 lg:w-3/12">
+        {productListData?.products?.map((list, key) => (
+          <div key={`product-${key}`} className="w-full px-3 mb-5 md:w-6/12 lg:w-3/12">
             <div className="rounded-lg listing-outer relative">
               <div>
                 <ImageView

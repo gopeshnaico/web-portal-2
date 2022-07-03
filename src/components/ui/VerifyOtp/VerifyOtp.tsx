@@ -6,6 +6,8 @@ import {
   UseFormHandleSubmit,
   UseFormRegister,
   UseFormSetFocus,
+  DeepMap,
+  FieldError
 } from 'react-hook-form';
 import LogoImage from '../../../../public/images/logo.svg';
 import ButtonComponent from '../../ui-components/button';
@@ -17,6 +19,10 @@ import { useAppSelector } from '../../../lib/redux/hooks';
 import { SignupLayout } from '../AppLayout/SignupLayout';
 import { useTranslation } from 'next-i18next';
 
+export type FieldErrors<
+  TFieldValues extends FieldValues = FieldValues
+> = DeepMap<TFieldValues, FieldError>;
+
 interface OTPFormProps {
   register: UseFormRegister<FieldValues>;
   getValues: UseFormGetValues<FieldValues>;
@@ -27,9 +33,7 @@ interface OTPFormProps {
   handleBack: () => void;
   setResetCount: (value: React.SetStateAction<boolean>) => void;
   resetCount: boolean;
-  errors: {
-    [x: string]: { message: string };
-  };
+  errors: FieldErrors;
   attempt: number;
 }
 

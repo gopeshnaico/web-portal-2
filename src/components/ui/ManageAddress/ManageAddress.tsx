@@ -51,8 +51,8 @@ export const ManageAddress: FC<ManageAddressProps> = ({
           </button>
         </div>
         <div className={addressHeightClass}>
-          {listAddress?.map((address) => (
-            <div className="relative w-full mb-5 border-2 border-gray-300 p-4 rounded-lg  pb-0">
+          {listAddress?.map((address, index) => (
+            <div key={`index-${index}`} className="relative w-full mb-5 border-2 border-gray-300 p-4 rounded-lg  pb-0">
               <h2 className="font-semibold text-xl py-2 flex">
                 <div className="w-10 h-10 mr-3 p-2 rounded-full bg-blue-500">
                   <ImageView

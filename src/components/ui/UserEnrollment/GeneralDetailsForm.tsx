@@ -225,8 +225,8 @@ export const GeneralDetailsForm: FC<GeneralDetailsFormProps> = ({
                 <option value={'select'} disabled selected>
                   {t('Business Type')}
                 </option>
-                {options.map((i) => (
-                  <option value={i.value}>{i.label}</option>
+                {options.map((i, key) => (
+                  <option key={`option-${key}`} value={i.value}>{i.label}</option>
                 ))}
               </select>
 
@@ -302,8 +302,8 @@ export const GeneralDetailsForm: FC<GeneralDetailsFormProps> = ({
                 </option>
 
                 {statesList &&
-                  statesList.geoLocations?.map((i) => (
-                    <option value={i.name}>{i.name}</option>
+                  statesList.geoLocations?.map((i, key) => (
+                    <option key={`statesList-${key}`} value={i.name}>{i.name}</option>
                   ))}
               </select>
 
@@ -324,7 +324,7 @@ export const GeneralDetailsForm: FC<GeneralDetailsFormProps> = ({
                 </option>
 
                 {districts &&
-                  districts?.map((i) => <option value={i.id}>{i.name}</option>)}
+                  districts?.map((i, key) => <option key={`distrct-${key}`} value={i.id}>{i.name}</option>)}
               </select>
               <ValidationMessages message={errors.district?.message} />
             </div>

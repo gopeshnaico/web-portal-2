@@ -5,6 +5,8 @@ import {
   UseFormHandleSubmit,
   UseFormRegister,
   UseFormSetFocus,
+  FieldError,
+  DeepMap
 } from 'react-hook-form';
 import LogoImage from '../../../../public/images/logo.svg';
 import ButtonComponent from '../../ui-components/button';
@@ -16,13 +18,15 @@ import { SignupLayout } from '../AppLayout/SignupLayout';
 import InputText from '../../ui-components/inputbox';
 import CheckBoxWithoutLabel from '../../ui-components/checkboxWithoutLabel';
 
+export type FieldErrors<
+  TFieldValues extends FieldValues = FieldValues
+> = DeepMap<TFieldValues, FieldError>;
+
 interface SignupProps {
   register: UseFormRegister<FieldValues>;
   handleSignup: (formValues: object) => Promise<void>;
   handleSubmit: UseFormHandleSubmit<FieldValues>;
-  errors: {
-    [x: string]: { message: string };
-  };
+  errors:FieldErrors;
   setFocus: UseFormSetFocus<FieldValues>;
   validateTerms: boolean;
   isCheckedTerms: boolean;

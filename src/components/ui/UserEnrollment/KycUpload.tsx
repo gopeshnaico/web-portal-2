@@ -65,9 +65,9 @@ export const KycUpload = ({
 
               <div className="row-outer block flex-wrap sm:flex pt-5">
                 {files &&
-                  files?.map((file) => {
+                  files?.map((file, index) => {
                     return (
-                      <div className="w-full px-3 mb-5 sm:w-4/12 md:w-6/12 lg:w-4/12 xl:w-4/12">
+                      <div key={`key-${index}`} className="w-full px-3 mb-5 sm:w-4/12 md:w-6/12 lg:w-4/12 xl:w-4/12">
                         <div className="w-full relative rounded-lg bg-gray-300">
                           <a className="bg-white rounded-full top-2 right-2 absolute">
                             <img

@@ -21,8 +21,9 @@ export const Pagination = ({
           </a>
         </li>
 
-        {pagesArray.map((page) => (
+        {pagesArray.map((page, index) => (
           <li
+          key={`pages-${index}`}
             className={pageSelected === page + 1 ? 'active' : ''}
             onClick={() => pagination(page)}
           >

@@ -63,9 +63,9 @@ export const AddProductImages: FC<AddProductImagesProps> = ({
       <div className="clear-both" />
       <div className="row-outer flex-wrap flex pt-5">
         {productImages &&
-          productImages?.map((image) => {
+          productImages?.map((image, index) => {
             return (
-              <div className="w-5/12 sm:w-4/12 md:w-3/12 lg:w-2/12 mb-4 mx-2 md:mx-3 md:mb-6 border-2 border-slate-200 overflow-hidden rounded-md h-36 relative">
+              <div  key={`image-${index}`} className="w-5/12 sm:w-4/12 md:w-3/12 lg:w-2/12 mb-4 mx-2 md:mx-3 md:mb-6 border-2 border-slate-200 overflow-hidden rounded-md h-36 relative">
                 <a className="bg-white rounded-full top-2 right-2 z-10 absolute">
                   <img
                     src="images/red-close.svg"

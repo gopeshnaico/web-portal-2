@@ -43,11 +43,11 @@ export const ProductDetails: FC<ProductDetailsAttributeListProps> = ({
                         {subHeader?.Attribute?.AttributeValue.map(
                           (subSubHeading, subSubHeadingIndex) => {
                             return (
-                              <div className="px-3 w-full mb-3 sm:w-6/12 md:w-6/12 lg:w-6/12 xl:w-4/12">
+                              <div  key={"product-detail"+subSubHeadingIndex} className="px-3 w-full mb-3 sm:w-6/12 md:w-6/12 lg:w-6/12 xl:w-4/12">
                                 <div className="form-control">
                                   <label
                                     className="label cursor-pointer"
-                                    key={subSubHeadingIndex}
+                                   
                                   >
                                     <input
                                       name={
