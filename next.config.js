@@ -2,6 +2,7 @@
 const withNx = require('@nrwl/next/plugins/with-nx');
 const { withSentryConfig } = require('@sentry/nextjs');
 const { i18n } = require('./next-i18next.config');
+const withImages = require('next-images')
 
 /**
  * @type {import('next').NextConfig}
@@ -50,7 +51,7 @@ const nextConfig = {
 //   sentryWebpackPluginOptions
 // );
 
-module.exports = nextConfig;
+module.exports = withImages(nextConfig);
 
 // module.exports = {
 //     i18n: {

@@ -36,6 +36,7 @@
     "i18next-xhr-backend": "^3.2.2",
     "next": "12.1.5",
     "next-i18next": "^11.0.0",
+    "next-images": "^1.8.4",
     "otp-timer": "^1.1.5",
     "react": "18.0.0",
     "react-dom": "18.0.0",
